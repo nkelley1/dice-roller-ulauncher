@@ -1,0 +1,8 @@
+{
+  "name": "Dice Roller",
+  "description": "Roll virtual dice with commands like 'roll 2d6 3d4'",
+  "version": "1.0",
+  "author": "Your Name",
+  "icon": "dice",
+  "trigger": "roll"
+}
