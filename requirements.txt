@@ -1,8 +1,7 @@
 import random
 import re
-from ulauncher.api.client import Client
-from ulauncher.api.ui import Item, ItemObject
 from ulauncher.api.extension import Extension
+from ulauncher.api.ui import Item
 
 class DiceRollerExtension(Extension):
     def __init__(self):
@@ -59,7 +58,7 @@ class DiceRollerExtension(Extension):
 
     def copy_result_to_clipboard(self, result):
         """Copy the result to the clipboard when the user presses enter."""
-        return lambda item: Client.copy_to_clipboard(result)
+        return lambda item: self.api.client.copy_to_clipboard(result)
 
 if __name__ == "__main__":
     DiceRollerExtension().run()
